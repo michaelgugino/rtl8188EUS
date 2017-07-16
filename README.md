@@ -29,8 +29,16 @@ cd into your kernel source.
 cp /usr/src/$(uname -r)/Module.symvers .
 cp /boot/config-$(uname -r) .config
 # Export the path where you downloaded the source.
-KSRC=$PWD
+export KSRC=$PWD
 ```
+
+The following commands may be necessary, I haven't tested on a clean system
+(they don't appear necessary as I've run make clean in the kernel tree.)
+```
+make prepare
+make scripts
+```
+
 
 cd back to this project.
 
