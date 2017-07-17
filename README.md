@@ -26,7 +26,7 @@ There may be one or two packages I missed, but that should cover most of it.
 cd into your kernel source.
 
 ```
-cp /usr/src/$(uname -r)/Module.symvers .
+cp /usr/src/linux-headers-$(uname -r)/Module.symvers .
 cp /boot/config-$(uname -r) .config
 # Export the path where you downloaded the source.
 export KSRC=$PWD
