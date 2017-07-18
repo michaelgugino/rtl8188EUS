@@ -1,3 +1,7 @@
+Please refer to the branches for different versions of this software.
+
+master:  Ubuntu 16.04 with 4.4.0
+
 This is a modified version of the driver from here:
 
 http://www.tp-link.com/us/download/TL-WN722N.html#Driver
