@@ -28,6 +28,8 @@
 	#include <linux/init.h>
 	#include <linux/slab.h>
 	#include <linux/module.h>
+        #include <linux/signal.h>
+        #include <linux/sched/signal.h>
 #if (LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,5))
 	#include <linux/kref.h>
 #endif

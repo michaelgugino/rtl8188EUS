@@ -29,6 +29,7 @@
 
 //Older Android kernel doesn't has CONFIG_ANDROID defined,
 //add this to force CONFIG_ANDROID defined
+/*
 #ifdef CONFIG_PLATFORM_ANDROID
 #ifndef CONFIG_ANDROID
 #define CONFIG_ANDROID
@@ -45,7 +46,7 @@
 //Android expect dbm as the rx signal strength unit
 #define CONFIG_SIGNAL_DISPLAY_DBM
 #endif
-
+*/
 #if defined(CONFIG_HAS_EARLYSUSPEND) && defined (CONFIG_RESUME_IN_WORKQUEUE)
 	#warning "You have CONFIG_HAS_EARLYSUSPEND enabled in your system, we disable CONFIG_RESUME_IN_WORKQUEUE automatically"
 	#undef CONFIG_RESUME_IN_WORKQUEUE

@@ -23,7 +23,7 @@
 #endif
 
 #include <drv_types.h>
-
+#include <linux/compat.h>
 #if defined(RTW_ENABLE_WIFI_CONTROL_FUNC)
 #include <linux/platform_device.h>
 #if (LINUX_VERSION_CODE >= KERNEL_VERSION(2, 6, 35))
