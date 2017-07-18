@@ -9,43 +9,28 @@ I'm not an experienced driver or kernel programmer.  Use at your own risk.
 
 It's not picking up any wireless N networks, but seems to be working with 2.4ghz networks.
 
-Instructions, tested on Ubuntu 16.04 with 4.4.0-59-generic #80-Ubuntu SMP
+Instructions, tested on Fedora 26 with kernel = branch name.
 
 I'm using a TP-Link TL-WN722N version 2.1.
 
 ```
-apt-get install linux-headers-$(uname -r)
-apt-get install binutils
-apt-get source linux-image-$(uname -r) # this will download source to PWD
-apt-get build-essential
+dnf install kernel-devel
 ```
 
-There may be one or two packages I missed, but that should cover most of it.
+You're going to need compilers and whatnot.  This stuff is already installed on default fedora workstation image.
 
 
 cd into your kernel source.
 
 ```
-cp /usr/src/linux-headers-$(uname -r)/Module.symvers .
-cp /boot/config-$(uname -r) .config
-# Export the path where you downloaded the source.
+cd /usr/src/kernels/$(uname -r)
 export KSRC=$PWD
 ```
 
-The following commands may be necessary, I haven't tested on a clean system
-(they don't appear necessary as I've run make clean in the kernel tree.)
 ```
-make prepare
-make scripts
-```
-
-
-cd back to this project.
-
-```
+export USER_EXTRA_CFLAGS="-Wno-incompatible-pointer-types"
 make
 sudo make install
-sudo modprobe -f 8188eu
 sudo modprobe 8188eu
 ```
 
