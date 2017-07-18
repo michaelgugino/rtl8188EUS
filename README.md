@@ -1,3 +1,5 @@
+Update:  Are you just looking for a working driver?  Give https://github.com/lwfinger/rtl8188eu a try.  LW Finger is a kernel maintainer, the software should be much better than mine.
+
 Please refer to the branches for different versions of this software.
 
 master:  Ubuntu 16.04 with 4.4.0
